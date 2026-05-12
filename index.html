@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Spend Optimizer – Free Instant Audit | Credex</title>
+  <meta name="description" content="Instantly audit your AI tool subscriptions. Find duplicate tools, oversized plans, and hidden savings. Free, no login required." />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI Spend Optimizer – Free Instant Audit" />
+  <meta property="og:description" content="Discover how much you're overspending on AI tools. Get instant savings recommendations. Free audit, no login." />
+  <meta property="og:image" content="https://credex.ai/og-preview.png" />
+  <meta property="og:url" content="https://credex.ai/ai-spend-optimizer" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Spend Optimizer – Free Instant Audit" />
+  <meta name="twitter:description" content="Audit your AI subscriptions in 60 seconds. Find savings you didn't know existed." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <header class="hero">
+    <nav class="nav">
+      <div class="nav-brand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-name">Credex</span>
+        <span class="brand-tag">AI Spend Optimizer</span>
+      </div>
+      <div class="nav-links">
+        <a href="#audit" class="btn btn-outline btn-sm">Start Free Audit</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        Free · No Login · Instant Results
+      </div>
+      <h1 class="hero-title">
+        Stop Burning Money on<br/>
+        <span class="gradient-text">AI Subscriptions</span>
+      </h1>
+      <p class="hero-subtitle">
+        The average team wastes <strong>$340/month</strong> on overlapping AI tools, unused features, and oversized plans. Get your free audit in 60 seconds.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">$4.1M+</span>
+          <span class="stat-label">Savings Found</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">2,800+</span>
+          <span class="stat-label">Audits Run</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">62%</span>
+          <span class="stat-label">Avg Reduction</span>
+        </div>
+      </div>
+      <a href="#audit" class="btn btn-primary btn-lg hero-cta">
+        Audit My AI Stack Free
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="hero-visual">
+      <div class="floating-card card-1">
+        <span class="fc-icon">💸</span>
+        <span class="fc-text">ChatGPT + Claude overlap</span>
+        <span class="fc-badge">$20/mo wasted</span>
+      </div>
+      <div class="floating-card card-2">
+        <span class="fc-icon">✅</span>
+        <span class="fc-text">Downgrade to Team plan</span>
+        <span class="fc-badge save">Save $180/mo</span>
+      </div>
+      <div class="floating-card card-3">
+        <span class="fc-icon">🔍</span>
+        <span class="fc-text">MidJourney unused seats</span>
+        <span class="fc-badge">4 idle licenses</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── AUDIT FORM ────────────────────────────────────────── -->
+  <section id="audit" class="audit-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Build Your AI Subscription Stack</h2>
+        <p>Add each tool you're currently paying for. We'll analyze overlaps, utilization, and pricing efficiency.</p>
+      </div>
+
+      <div class="audit-layout">
+        <!-- LEFT: Form -->
+        <div class="form-panel glass-card" id="formPanel">
+          <!-- Step 1: Tools -->
+          <div class="form-step active" id="step1">
+            <div class="step-header">
+              <span class="step-number">01</span>
+              <div>
+                <h3>Your AI Tools</h3>
+                <p>Add every AI subscription you pay for</p>
+              </div>
+            </div>
+
+            <div id="toolsList" class="tools-list"></div>
+
+            <div class="add-tool-row">
+              <div class="tool-input-group">
+                <select id="toolSelect" class="input-field">
+                  <option value="">Select AI Tool…</option>
+                  <optgroup label="Writing & Chat">
+                    <option value="chatgpt_plus">ChatGPT Plus ($20/mo)</option>
+                    <option value="chatgpt_team">ChatGPT Team ($30/user)</option>
+                    <option value="claude_pro">Claude Pro ($20/mo)</option>
+                    <option value="claude_team">Claude Team ($30/user)</option>
+                    <option value="gemini_advanced">Gemini Advanced ($20/mo)</option>
+                    <option value="perplexity_pro">Perplexity Pro ($20/mo)</option>
+                    <option value="jasper">Jasper ($49/mo)</option>
+                    <option value="copy_ai">Copy.ai ($49/mo)</option>
+                    <option value="writesonic">Writesonic ($19/mo)</option>
+                  </optgroup>
+                  <optgroup label="Image & Creative">
+                    <option value="midjourney_basic">MidJourney Basic ($10/mo)</option>
+                    <option value="midjourney_standard">MidJourney Standard ($30/mo)</option>
+                    <option value="midjourney_pro">MidJourney Pro ($60/mo)</option>
+                    <option value="dalle3">DALL-E 3 (via ChatGPT+)</option>
+                    <option value="adobe_firefly">Adobe Firefly ($5/mo)</option>
+                    <option value="stable_diffusion">Stable Diffusion API ($10/mo)</option>
+                    <option value="canva_pro">Canva Pro AI ($15/mo)</option>
+                  </optgroup>
+                  <optgroup label="Coding">
+                    <option value="github_copilot">GitHub Copilot ($10/mo)</option>
+                    <option value="cursor_pro">Cursor Pro ($20/mo)</option>
+                    <option value="tabnine">Tabnine ($12/mo)</option>
+                    <option value="codeium">Codeium Pro ($15/mo)</option>
+                    <option value="replit_ai">Replit AI ($20/mo)</option>
+                  </optgroup>
+                  <optgroup label="Productivity & Analytics">
+                    <option value="notion_ai">Notion AI ($10/mo)</option>
+                    <option value="otter_ai">Otter.ai ($17/mo)</option>
+                    <option value="fireflies">Fireflies.ai ($18/mo)</option>
+                    <option value="grammarly_pro">Grammarly Pro ($12/mo)</option>
+                    <option value="runway_ml">Runway ML ($15/mo)</option>
+                  </optgroup>
+                  <option value="custom">Custom / Other tool…</option>
+                </select>
+                <input type="number" id="toolCost" class="input-field" placeholder="$/mo" min="0" style="max-width:110px;" />
+                <input type="number" id="toolSeats" class="input-field" placeholder="Seats" min="1" value="1" style="max-width:90px;" />
+                <button class="btn btn-accent" id="addToolBtn" onclick="addTool()">+ Add</button>
+              </div>
+              <div id="customToolName" class="custom-tool-row" style="display:none;">
+                <input type="text" id="customName" class="input-field" placeholder="Tool name (e.g., Anthropic API)" />
+              </div>
+            </div>
+
+            <!-- Team Info -->
+            <div class="form-section-divider">
+              <span>Team & Usage Details</span>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="teamSize">Team Size</label>
+                <select id="teamSize" class="input-field">
+                  <option value="1">Just me (1)</option>
+                  <option value="2-5">Small team (2–5)</option>
+                  <option value="6-15" selected>Medium team (6–15)</option>
+                  <option value="16-50">Growing team (16–50)</option>
+                  <option value="51+">Enterprise (51+)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="primaryUse">Primary Use Case</label>
+                <select id="primaryUse" class="input-field">
+                  <option value="content">Content Creation</option>
+                  <option value="coding" selected>Software Development</option>
+                  <option value="analytics">Data & Analytics</option>
+                  <option value="marketing">Marketing & SEO</option>
+                  <option value="design">Design & Creative</option>
+                  <option value="sales">Sales & CRM</option>
+                  <option value="operations">Operations & Automation</option>
+                  <option value="research">Research & Education</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">How actively do your team members use these tools?</label>
+              <div class="usage-slider-wrap">
+                <input type="range" id="utilizationRate" min="10" max="100" value="60" class="usage-slider" oninput="updateSliderLabel(this.value)" />
+                <div class="slider-labels">
+                  <span>Rarely</span>
+                  <span id="sliderVal" class="slider-val">60% active</span>
+                  <span>Daily</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-full" id="runAuditBtn" onclick="runAudit()">
+              <span class="btn-icon">🔍</span>
+              Run My Free Audit
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Results -->
+        <div class="results-panel" id="resultsPanel" style="display:none;">
+          <div class="results-loading" id="resultsLoading">
+            <div class="spinner"></div>
+            <p>Analyzing your AI stack…</p>
+            <div class="loading-steps">
+              <div class="ls" id="ls1">🔍 Scanning for tool overlaps…</div>
+              <div class="ls" id="ls2">📊 Evaluating plan efficiency…</div>
+              <div class="ls" id="ls3">💡 Generating recommendations…</div>
+              <div class="ls" id="ls4">✅ Audit complete!</div>
+            </div>
+          </div>
+
+          <div class="results-content" id="resultsContent" style="display:none;">
+            <!-- Summary Banner -->
+            <div class="savings-banner" id="savingsBanner">
+              <div class="savings-banner-inner">
+                <div class="sb-label">Potential Monthly Savings</div>
+                <div class="sb-amount" id="sbAmount">$0</div>
+                <div class="sb-annual" id="sbAnnual">$0/year</div>
+              </div>
+              <div class="savings-score">
+                <div class="score-ring" id="scoreRing">
+                  <svg viewBox="0 0 80 80">
+                    <circle class="ring-bg" cx="40" cy="40" r="32"/>
+                    <circle class="ring-fill" id="ringFill" cx="40" cy="40" r="32" stroke-dasharray="201" stroke-dashoffset="201"/>
+                  </svg>
+                  <span class="score-val" id="scoreVal">0</span>
+                </div>
+                <span class="score-label">Waste Score</span>
+              </div>
+            </div>
+
+            <!-- Findings -->
+            <div class="findings-section">
+              <h3 class="findings-title">⚠️ Issues Found</h3>
+              <div id="findingsList" class="findings-list"></div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="recs-section">
+              <h3 class="recs-title">💡 Recommendations</h3>
+              <div id="recsList" class="recs-list"></div>
+            </div>
+
+            <!-- Breakdown Table -->
+            <div class="breakdown-section">
+              <h3>📋 Spend Breakdown</h3>
+              <div class="breakdown-table-wrap">
+                <table class="breakdown-table" id="breakdownTable">
+                  <thead>
+                    <tr>
+                      <th>Tool</th>
+                      <th>Current Cost</th>
+                      <th>Status</th>
+                      <th>Optimized Cost</th>
+                      <th>Saving</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownBody"></tbody>
+                  <tfoot id="breakdownFoot"></tfoot>
+                </table>
+              </div>
+            </div>
+
+            <!-- CTA zone -->
+            <div class="cta-zone" id="ctaZone">
+              <div class="cta-capture" id="ctaCapture">
+                <div class="cta-capture-icon">📥</div>
+                <h3>Get Your Full Report</h3>
+                <p>Enter your email to receive your personalized AI spend audit PDF and keep these savings on file.</p>
+                <div class="email-form">
+                  <input type="email" id="emailInput" class="input-field" placeholder="your@company.com" />
+                  <button class="btn btn-primary" onclick="captureEmail()">Send My Report →</button>
+                </div>
+                <span class="cta-privacy">🔒 No spam. Unsubscribe anytime.</span>
+              </div>
+
+              <div class="cta-consult" id="ctaConsult" style="display:none;">
+                <div class="consult-badge">🚀 High Savings Detected</div>
+                <h3>Book a Free Credex Consultation</h3>
+                <p>You have <strong id="consultSavings">$0/mo</strong> in potential savings. Our AI procurement team can implement these changes for your team in under a week.</p>
+                <div class="consult-buttons">
+                  <button class="btn btn-primary btn-lg" onclick="bookConsultation()">Book Free Consultation →</button>
+                  <button class="btn btn-ghost" onclick="captureEmail()">Just Email My Report</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Share Row -->
+            <div class="share-row">
+              <span class="share-label">Share your audit:</span>
+              <button class="share-btn twitter" onclick="shareReport('twitter')">𝕏 Twitter</button>
+              <button class="share-btn linkedin" onclick="shareReport('linkedin')">in LinkedIn</button>
+              <button class="share-btn hn" onclick="shareReport('hn')">▲ Hacker News</button>
+              <button class="share-btn copy" onclick="copyLink()">🔗 Copy Link</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ──────────────────────────────────────── -->
+  <section class="how-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>How the Audit Works</h2>
+        <p>Our analysis engine checks 7 categories of AI overspend in seconds</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="how-icon">🔄</div>
+          <h4>Overlap Detection</h4>
+          <p>Identifies tools with duplicate capabilities (e.g., ChatGPT + Claude both doing copywriting)</p>
+        </div>
+        <div class="how-card">
+          <div class="how-icon">📉</div>
+          <h4>Plan Right-sizing</h4>
+          <p>Checks if you're on a Pro plan when a free or basic tier covers your actual usage</p>
+        </div>
+        <div class="how-card">
+          <div class="how-icon">👥</div>
+          <h4>Seat Optimization</h4>
+          <p>Flags idle licenses and recommends consolidating to active users only</p>
+        </div>
+        <div class="how-card">
+          <div class="how-icon">🎯</div>
+          <h4>Use-Case Fit</h4>
+          <p>Matches tools to your primary workflow and removes misaligned subscriptions</p>
+        </div>
+        <div class="how-card">
+          <div class="how-icon">💰</div>
+          <h4>Annual vs Monthly</h4>
+          <p>Calculates savings from switching to annual billing where it makes sense</p>
+        </div>
+        <div class="how-card">
+          <div class="how-icon">🔮</div>
+          <h4>Future Spend Forecast</h4>
+          <p>Projects your 12-month AI spend trajectory with and without optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOCIAL PROOF ──────────────────────────────────────── -->
+  <section class="proof-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Teams That Ran the Audit</h2>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial glass-card">
+          <div class="t-quote">"We had ChatGPT Plus, Claude Pro, AND Jasper for the same content team. The audit saved us $340/month instantly."</div>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">SR</div>
+            <div>
+              <strong>Sarah R.</strong>
+              <span>Head of Content, TechStack Inc.</span>
+            </div>
+          </div>
+          <div class="t-saving">Saved $340/mo</div>
+        </div>
+        <div class="testimonial glass-card">
+          <div class="t-quote">"Realized we were paying for GitHub Copilot AND Cursor AND Tabnine for the same dev team. This tool caught it in 30 seconds."</div>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">MK</div>
+            <div>
+              <strong>Marcus K.</strong>
+              <span>CTO, Finflow Labs</span>
+            </div>
+          </div>
+          <div class="t-saving">Saved $210/mo</div>
+        </div>
+        <div class="testimonial glass-card">
+          <div class="t-quote">"The Credex consultation after was gold. They negotiated annual rates and saved us another $1,200 on top of the audit findings."</div>
+          <div class="t-author">
+            <div class="t-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">PL</div>
+            <div>
+              <strong>Priya L.</strong>
+              <span>VP Operations, GrowthMind</span>
+            </div>
+          </div>
+          <div class="t-saving">Saved $580/mo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-icon">⚡</span>
+          <span class="brand-name">Credex</span>
+          <p>AI procurement intelligence for modern teams.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="mailto:hello@credex.ai">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Credex. All rights reserved.</span>
+        <span>Made with ❤️ to stop AI subscription waste</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── EMAIL SUCCESS TOAST ───────────────────────────────── -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ── SHARE MODAL ───────────────────────────────────────── -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal glass-card" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
